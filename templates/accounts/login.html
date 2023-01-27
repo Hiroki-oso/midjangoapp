@@ -6,21 +6,21 @@
 {% block main %}
 <div class="row">
     <div class="col-12 col-md-6 mx-auto">
-        <div class="card mt-5 mb-5 d-flex align-items-center mx-auto" style="width: 22rem; height: 21rem">
+        <div class="card mt-5 mb-5 d-flex align-items-center mx-auto login" style="width: 22rem; height: 23rem">
             <h3 class="login mt-3">Login</h3>
-            <i class="bi bi-brightness-alt-high-fill"></i>
-            <div class="card-body mt-2">
-            <form method="POST">
+            <i class="bi bi-brightness-alt-high-fill fs-1"></i>
+            <div class="card-body mb-3 login">
+            <form method="POST" class="login-form">
                 {% csrf_token %}
-                <div class="mb-3">
+                <div class="">
                 <label for="exampleInputEmail1" class="form-label">メールアドレス</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="width: 18rem" name="username" required>
                 </div>
-                <div class="mb-3">
+                <div class="mt-2 mb-3">
                 <label for="exampleInputPassword1" class="form-label">パスワード</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" style="width: 18rem" name="password" required>
                 </div>
-                <button type="submit" class="btn btn-primary">登録</button>
+                <button type="submit" class="btn btn-primary mb-3">登録</button>
             </form>
             </div>
         </div>

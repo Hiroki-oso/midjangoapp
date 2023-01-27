@@ -6,6 +6,8 @@
     --bl: black;
     --re: red;
     --ge: green;
+    --mye: rgb(237, 237, 38);
+    --ye:yellow;
     --db: rgb(47, 0, 255);
     
     /* text */ 
@@ -200,11 +202,25 @@ li.alert.alert-danger {
 
 /******************* カード関連　******************/
 
-/* login signup のカード　*/
-.card.mt-5.mb-5.d-flex.align-items-center.mx-auto {
+/* loginのカード　*/
+.card.mt-5.mb-5.d-flex.align-items-center.mx-auto.login {
     border: 1px solid var(--bl);
     border-radius: 10px;
 } 
+/* login icon*/
+i.bi.bi-brightness-alt-high-fill.fs-1{
+    color: var(--re);
+}
+/* sighupのカード*/
+.card.mt-5.mb-5.d-flex.align-items-center.mx-auto.sighup {
+    border: 1px solid var(--bl);
+    border-radius: 10px;
+} 
+/* signup icon */
+i.bi.bi-moon-stars-fill.fs-3{
+    color: var(--mye);
+}
+/*フォーム*/
 .form-control {
     width: 200px;
 }
