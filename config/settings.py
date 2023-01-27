@@ -1,16 +1,14 @@
 from pathlib import Path
 import os
+import environ
 from django.contrib import messages 
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 from django.core.management.utils import get_random_secret_key 
 SECRET_KEY = get_random_secret_key() 
-
-SECRET_KEY = "django-insecure-!y_(ah40)^d^%hn6%$o%ai8aga&kg!**avnjcm46^()x#0fe#v"
-
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['157.7.215.235']
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -53,14 +51,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -91,7 +89,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
+STATIC_ROOT = '/usr/share/nginx/html/static'
 # ログイン、ログアウト
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/list/'
